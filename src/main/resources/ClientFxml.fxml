@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+             fx:id = "root1" styleClass="border" fx:controller = "ClientController">
+
+    <left><VBox fx:id="VBox1">
+        <TextField fx:id = "ClientTxt" text = "" />
+        <Button fx:id = "sendButton" text = "Send" onAction="#sendHandle"/>
+        <TextField fx:id = "AddTxt" text = "Number of clients to add:" />
+        <Button fx:id = "AddButton" text = "Add" onAction="#sendHandle"/>
+    </VBox></left>
+
+    <center> <ListView fx:id="clientView" /></center>>
+
+
+
+
+</BorderPane>

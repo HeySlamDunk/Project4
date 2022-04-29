@@ -1,0 +1,14 @@
+.button {
+	-fx-font-size: 18px;
+	-fx-font-weight: bold;
+	-fx-background-color: pink;
+}
+.list-view {
+    -fx-background-insets: 20, 40, 60, 80;
+
+
+}
+
+.border {
+	-fx-background-color: orange;
+}

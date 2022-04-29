@@ -1,0 +1,10 @@
+
+.list-view {
+    -fx-background-insets: 20, 40, 60, 80;
+
+
+}
+
+.border {
+	-fx-background-color: orange;
+}
