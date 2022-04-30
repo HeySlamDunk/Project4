@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 
 public class Client extends Thread{
 
-	
+	int myID;
 	Socket socketClient;
 	
 	ObjectOutputStream out;
@@ -31,6 +31,13 @@ public class Client extends Thread{
 	    socketClient.setTcpNoDelay(true);
 		}
 		catch(Exception e) {}
+
+		try {
+			Message data = (Message) in.readObject();
+			myID = data.getUser();
+			callback.accept(data);
+		}
+		catch(Exception e) {}
 		
 		while(true) {
 			 
@@ -43,10 +50,11 @@ public class Client extends Thread{
 	
     }
 	
-	public void send(String data) {
+	public void send(Message data) {
 		
 		try {
 			out.writeObject(data);
+			out.reset();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
